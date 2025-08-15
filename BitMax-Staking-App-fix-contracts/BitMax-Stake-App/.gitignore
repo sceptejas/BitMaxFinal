@@ -1,0 +1,20 @@
+# ── Node / JS ───────────────────────────
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# ── Hardhat build output ───────────────
+artifacts/
+cache/
+
+# ── Front-end build / static assets ────
+frontend/dist/
+frontend/build/
+
+# ── Misc ───────────────────────────────
+secret.json
+.env
+.DS_Store
+
+# macOS resource-fork files
+   ._* 

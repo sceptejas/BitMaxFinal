@@ -1,0 +1,190 @@
+/* SalesChart.css */
+.sales-analytics-container {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .chart-title-container {
+    margin-bottom: 16px;
+  }
+  
+  .chart-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+  }
+  
+  .chart-subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    margin: 0;
+  }
+  
+  .chart-type-selector {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .chart-type-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #2d2d2d;
+    color: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .chart-type-btn:hover {
+    background-color: #3d3d3d;
+  }
+  
+  .chart-type-btn.active {
+    background-color: #ff7700;
+    color: white;
+  }
+  
+  .timeframe-tabs {
+    display: flex;
+    border-bottom: 1px solid #334155;
+    margin-bottom: 24px;
+  }
+  
+  .timeframe-tab {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+  
+  .timeframe-tab:hover {
+    color: #e2e8f0;
+  }
+  
+  .timeframe-tab.active {
+    color: #ff7700;
+  }
+  
+  .timeframe-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff7700;
+  }
+  
+  .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .legend-color.revenue {
+    background-color: #ff7700;
+  }
+  
+  .legend-color.orders {
+    background-color: #ff9f40;
+  }
+  
+  .legend-color.profit {
+    background-color: #ffc107;
+  }
+  
+  .legend-label {
+    font-size: 14px;
+    color: #d1d5db;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 24px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .stat-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+  
+  .stat-value {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+  }
+  
+  .stat-change {
+    font-size: 14px;
+  }
+  
+  .stat-change.positive {
+    color: #ff7700;
+  }
+  
+  .stat-change.negative {
+    color: #ef4444;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .chart-header {
+      flex-direction: column;
+    }
+    
+    .chart-type-selector {
+      margin-bottom: 16px;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
